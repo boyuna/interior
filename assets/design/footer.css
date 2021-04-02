@@ -1,0 +1,79 @@
+
+.footer-wrp {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3,1fr);
+  -ms-grid-rows: 120px;
+  grid-template-rows: 120px;
+      grid-template-areas:
+  'inner-footer-wrp inner-footer-wrp contacts';
+}
+
+.inner-footer-wrp {
+  grid-area: inner-footer-wrp;
+  font: 17px 'Montserrat', Helvetica, sans-serif;
+  background: white;
+  line-height: 1.5em;
+  padding: 16px;
+  background: #184863;
+  color: white;
+  border-top: 6px solid #ccc;
+}
+
+.contacts {
+  grid-area: contacts;
+  font: 18px 'Space Mono', Helvetica, sans-serif;
+  background: #184863;
+  padding: 15px;
+  color: white;
+  border-top: 6px solid #778899;
+}
+
+.contacts a:hover {color: #ccc;}
+
+.ml0 {margin-left: 35px; letter-spacing: 1px;}
+
+.contacts i {
+  font: bold 16px 'Space Mono';
+  color: #dbae44;
+}
+
+.phone {margin-left: 13px; letter-spacing: 1px;}
+
+.contacts a {
+  color: indianred;
+  text-decoration: none;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #333;
+  font: bold 16px 'Space Mono';
+  letter-spacing: 1px;
+}
+
+.allr {color: #ccc;}
+
+.copyright img:not(.foo) {
+  width: 180px;
+  height: 30px;
+}
+
+.contacts span {
+  color: #ccc;
+  font: 15px 'Montserrat', Helvetica, sans-serif;
+  border-bottom: 1px solid gray;
+  bottom: 2px;
+}
+
+.copyright a {
+  text-decoration: none;
+  font: bold 19px 'Monserrat', Tahoma, Arial;
+  text-shadow: 1px 1px #333;
+  color: #778899;
+}
+
+.copyright p {
+  font: normal 'Carlito', Tahoma, Arial;
+  font-size: .8em;
+  letter-spacing: 1px;
+  margin-top: 2px;
+}

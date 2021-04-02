@@ -1,0 +1,226 @@
+
+.header {
+  width: 100%;
+  height: 825px;
+  display: inline-block;
+  background: url(images/header_bg.jpg) no-repeat center;
+  background-size: cover;
+  position: relative;
+}
+
+.header::before {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-bottom: 100px solid #fff;
+  border-right: 50vw solid transparent;
+}
+
+.header::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border-bottom: 100px solid #fff;
+  border-left: 50vw solid transparent;
+}
+
+.header-wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3,1fr);
+  -ms-grid-rows: 190px 200px 94px 90px 120px;
+  grid-template-rows: 190px 200px 94px 90px 120px;
+  grid-template-areas:
+  'logo . request-a-call'
+  'promotional-offer promotional-offer promotional-offer'
+  '. compose-a-letter .'
+  'advantages advantages advantages'
+  'advantages-block advantages-block2 advantages-block3';
+}
+
+.logo {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: logo;
+  margin: 40px 25px;
+}
+
+.logotype:not(.logotype_text) {
+  width: 190px;
+  height: 96px;
+}
+
+.promotional-offer {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: promotional-offer;
+  text-align: center;
+}
+
+.promotional-offer h2 {
+  font-family: 'Futura Book';
+  font-size: 40px;
+  text-shadow: 1px 1px 2px white, 0 0 0.2em white;
+  text-transform: uppercase;
+  color: #993333;
+}
+
+.promotional-offer i {
+  font: italic 1.4em 'Carlito', Helvetica, sans-serif;
+  text-shadow: 1px 2px 2px #333, 0 0 1em black, 0 0 0.3em #333;
+  text-align: center;
+  color: lightblue;
+}
+
+.compose-a-letter {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: compose-a-letter;
+  margin: 0 auto;
+}
+
+.compose-a-letter__btn {
+  display: inline-block;
+  font: 12px 'Montserrat', sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  width: 150px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 50px;
+  margin: 10px 20px;
+  letter-spacing: 3px;
+  font-weight: 600;
+  color: white;
+  background: #339966;
+  -webkit-box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
+          box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+.tabs__text img {
+  max-width: 100%;
+}
+
+.compose-a-letter__btn:hover {
+  background: #993333;
+  -webkit-box-shadow: 0 15px 20px rgba(191, 63, 63, .4);
+          box-shadow: 0 15px 20px rgba(191, 63, 63, .4);
+  -webkit-transform: translateY(-7px);
+      -ms-transform: translateY(-7px);
+          transform: translateY(-7px);
+  color: #ccc;
+}
+
+.compose-a-letter__btn:active {
+  -webkit-box-shadow: 0px 2px 0px #d35400;
+  box-shadow: 0px 2px 0px #d35400;
+  top:4px;
+}
+
+.advantages {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: advantages;
+}
+
+.advantages h3 {
+  font: bold 2em 'Futura_Book-Bold';
+  text-shadow: 1px 1px #d1d8eb, 0 0 0.1em #d1d8eb; 
+  line-height: 60px;
+  text-align: center;
+  color: #993333;
+}
+
+.advantages-block {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: advantages-block;
+}
+
+.advantages-block2 {
+  -ms-grid-row: 5;
+  -ms-grid-column: 2;
+  grid-area: advantages-block2;
+}
+
+.advantages-block3 {
+  -ms-grid-row: 5;
+  -ms-grid-column: 3;
+  grid-area: advantages-block3;
+}
+
+.advantages-block h4,
+.advantages-block2 h4,
+.advantages-block3 h4 {
+  font-family: 'FuturaBookCTT';
+  font-size: 1.6em;
+  text-align: center;
+  padding-right: 5px;
+  color: white;
+  line-height: 30px;
+  font-weight: 500;
+}
+
+.advantages__img {
+  position: relative;
+  width: 92px;
+  height: 92px;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -50px;
+}
+
+.compose-a-letter__btn {	
+  -webkit-box-shadow: 0 0 0 rgba(205, 92, 92, 0.7);	
+          box-shadow: 0 0 0 rgba(205, 92, 92, 0.7);
+  -webkit-animation: pulse 2.1s infinite;
+          animation: pulse 2.1s infinite;
+  top: 35.3%;
+  right: 38.5%;
+}
+
+.compose-a-letter__btn:hover {
+  animation: none;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0.6);
+  }
+  70% {
+    -webkit-box-shadow: 0 0 0 15px rgba(204,169,44, 0);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgba(47, 63, 79, 0.7);
+    box-shadow: 0 0 0 0 rgba(47, 63, 79, 0.7);
+  }
+  70% {
+    -moz-box-shadow: 0 0 0 100px rgba(204,169,44, 0);
+    box-shadow: 0 0 0 15px rgba(204,169,44, 0);
+  }
+  100% {
+    -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+    box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+  }
+}
